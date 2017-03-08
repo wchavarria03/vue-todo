@@ -1,7 +1,15 @@
-/*import Vue from 'vue'; */
+<template> 
+  <div>
+    {{helloMessage}}
+  </div>
+</template>
 
-const AppComponent = Vue.extend({
-  template: '<h1>Hello World</h1>',
-});
-
-export default AppComponent;
+<script>
+  export default {
+    data() {
+      return {
+        helloMessage: 'Hello World'
+      }
+    }
+  }
+</script>

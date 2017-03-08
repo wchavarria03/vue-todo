@@ -12,7 +12,7 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].js',
     publicPath: '/dist/'
   },
   
@@ -30,24 +30,20 @@ module.exports = {
         options: { presets: ['es2015'] },
         exclude: [/node_modules/]
       },
-      // {
-      //   test: /\.vue$/, 
-      //   loader: 'vue-loader' 
-      // },
+      {
+        test: /\.vue$/, 
+        loader: 'vue-loader' 
+      },
       {
         test: /\.s?css$/,
         use: ['style-loader', 'css-loader?sourceMap', 'sass-loader']
-        //use: ['style-loader', 'css-loader?sourceMap?minimize', 'sass-loader']
       }
     ]
   },
 
   resolve: {
     alias: {
-      'vue': '../node_modules/vue/dist/vue.js'
-      // ,
-      // 'dist': path.resolve(__dirname, '/dist'),
-      // 'components': path.resolve(__dirname, '/dist/components')
+      'vue': '../node_modules/vue/dist/vue.esm.js'
     }
   }
 }
