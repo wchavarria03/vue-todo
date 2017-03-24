@@ -9,14 +9,14 @@
   import TodoTitle from './todo-title/todo-title.vue';
   import TodoBox from './todo-box/todo-box.vue';
   export default {
-    data() {
+    data () {
       return {
         title: 'Todo List'
-      }
+      };
     },
     components: {
       TodoTitle,
       TodoBox
     }
-  }
+  };
 </script>

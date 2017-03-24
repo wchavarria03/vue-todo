@@ -25,6 +25,12 @@ module.exports = {
   module: {
     rules: [
       {
+        enforce: 'pre',
+        test: /.vue$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         options: { presets: ['es2015'] },
@@ -32,7 +38,7 @@ module.exports = {
       },
       {
         test: /\.vue$/, 
-        loader: 'vue-loader' 
+        loader: ['vue-loader']
       },
       {
         test: /\.s?css$/,

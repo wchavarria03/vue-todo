@@ -1,14 +1,17 @@
 <template>
   <div>
-    Form
+    <todo-form></todo-form>
     <br>
     List
     <br>
     Footer
   </div>
 </template>
-<scripts>
+<script>
+  import TodoForm from './todo-form/todo-form.vue';
   export default {
-    
-  }
-</scripts>
+    components: {
+      TodoForm
+    }
+  };
+</script>
