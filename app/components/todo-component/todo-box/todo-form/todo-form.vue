@@ -1,16 +1,20 @@
 <template>
   <div className="header">
     <input
-        className="new-todo"
+        class="new-todo"
         placeholder="What needs to be done?"
-        onKeyDown={addTodo}
-        onChange={changeInput}
-        value={newTodo}
+        v-on:keyup.13="addTodo()"
+        
       />
     </div>
 </template>
 <scripts>
-  export default {
-
+export default {
+    data () {
+      return {
+        newTodo: ''
+      };
+    },
+    props: ['addTodo']
   };
 </scripts>

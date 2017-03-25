@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "rimraf dist && webpack",
-    "start": "webpack-dev-server --content-base dist/",
+    "start": "webpack-dev-server --content-base dist/ --port 3000",
     "linter": "eslint --ext js,vue app/"
   },
   "dependencies": {
