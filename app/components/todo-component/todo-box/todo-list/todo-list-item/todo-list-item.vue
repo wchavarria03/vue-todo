@@ -1,13 +1,14 @@
 <template>
 	<li>
-    <input class="toggle" type="checkbox"/>
+    <!--TODO: Change the hard code string COMPLETED -->
+    <input class="toggle" type="checkbox" v-bind:checked="todo.status === 'COMPLETED'" v-on:change="toggleTodo(todo.id)"/>
     <label>{{todo.text}}</label>
-    <button class="destroy"></button>
+    <button class="destroy" v-on:click="removeTodo(todo.id)"></button>
   </li>
 </template>
 
 <script>
 export default {
-  props: ['todo']
+  props: ['todo', 'removeTodo', 'toggleTodo']
 };
 </script>
